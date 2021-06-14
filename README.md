@@ -6,7 +6,7 @@ Run instructions:
 2. Run `npm install`
 3. Run `npm start`
 ```
-
+## Front-End
 ### **Components:** 
 - Navigation for signout / signin / register form.
 - Logo for looking nice
