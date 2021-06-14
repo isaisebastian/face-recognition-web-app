@@ -10,7 +10,7 @@ Run instructions:
 ### **Components:** 
 - Navigation for signout / signin / register form.
 - Logo for looking nice
-- ImageLinkForm for image link input and submit button.
+- ImageLinkForm for image link input and submit button for detection.
 - Rank (static for now) - displays user's rank. This rank is established by number of user's images detected with faces.
 - FaceRecognition:
   The object for face recognition will first need to figure out the first dot, second dot, third dot and the fourth dot, around the face and then we're just going to wrap it in a border. We are just using the response Clarifai's API gives us, the coordinates of the face in the picture. \
