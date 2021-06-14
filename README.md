@@ -8,7 +8,7 @@ Run instructions:
 ```
 ## Front-End
 ### **Components:** 
-- Navigation for signout / signin / register form.
+- Navigation nav for signout / signin / register.
 - Logo for looking nice
 - ImageLinkForm for image link input and submit button for detection.
 - Rank (static for now) - displays user's rank. This rank is established by number of user's images detected with faces.
