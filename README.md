@@ -24,6 +24,6 @@ Finally:
 - [AI Face Detection Model](https://www.clarifai.com/models/ai-face-detection)
 - [Tachyons](https://tachyons.io/)
 
-Currently working on **Back-End Server** and **Database** using Node.js. 
+Currently working on **Back-End Server**(Node.js) and **Database**. 
 
 *A demo should be available soon..*
