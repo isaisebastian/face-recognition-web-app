@@ -44,7 +44,7 @@ e.g. localhost:3000/ (root) - "get all users"
 
 - [Nodemon](https://www.npmjs.com/package/nodemon) - automatically restarting the node application when file changes in the directory are detected.
 - [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) **will be used** - to have a secure and real login form, encrypted passwords for users. \
-[Postman APIs Platform](https://www.postman.com/) has been used for tests, I assume it can be used any other tool directly in the browser from your browser web store (e.g. Chrome Web Store).
+[Postman APIs Platform](https://www.postman.com/) has been used for tests, I assume it can be used any other tool directly in the browser from your browser web store (e.g. REST Ape - Advanced API Testing Client - Chrome Web Store).
 
 (❗) Server has been set up on a **mock database** for now, *repo will be updated with a real connected **PostgreSQL** database in the future* (*currently working on it*).
 
