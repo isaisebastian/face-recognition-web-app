@@ -39,7 +39,7 @@ e.g. localhost:3000/ (root) - "get all users"
   /image --> PUT request, update on user profile
 		  ->> respond with updated entries count
  ```
- *check face-recognition-api/ for **code review***
+ *check face-recognition-server/ for **code review***
 ### **Resources:**
 
 - [Nodemon](https://www.npmjs.com/package/nodemon) - automatically restarting the node application when file changes in the directory are detected.
