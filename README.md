@@ -11,7 +11,7 @@ Run instructions:
 - **Navigation** /nav for **signout** / **signin** / **register**.
 - **Logo** for looking nice 
 - **ImageLinkForm** for image link input and submit button for detection.
-- **Rank** (static for now) - displays user's rank. This rank is established by number of user's images detected with faces.
+- **Rank** - displays user's entries. Established by number of user's image tests.
 - **FaceRecognition**:
   The object for face recognition will first need to figure out the first dot, second dot, third dot and the fourth dot, around the face and then we're just going to wrap it in a border. We are just using the response Clarifai's API gives us, the coordinates of the face in the picture. \
 Finally:
@@ -25,7 +25,7 @@ Finally:
 - [Tachyons](https://tachyons.io/)
 - [React Tilt](https://awesomeopensource.com/project/jonathandion/react-tilt)
 
-## 🆕 Back-End (Setting Up the Server) 🔥
+## Back-End (Setting Up the Server) 🔥
 
 ```
 Routes details:
@@ -43,10 +43,13 @@ e.g. localhost:3000/ (root) - "get all users"
 ### **Resources:**
 
 - [Nodemon](https://www.npmjs.com/package/nodemon) - automatically restarting the node application when file changes in the directory are detected.
-- [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) **will be used** - to have a secure and real login form, encrypted passwords for users. \
+- [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) - used to have a secure and real login form, encrypted passwords for users. \
 [Postman APIs Platform](https://www.postman.com/) has been used for tests, I assume it can be used any other tool directly in the browser from your browser web store (e.g. REST Ape - Advanced API Testing Client - Chrome Web Store).
+- 🆕 [Knex.js](https://knexjs.org/) - query builder for SQL. 
 
-(❗) Server has been set up on a **mock database** for now, *repo will be updated with a real connected **PostgreSQL** database in the future* (*currently working on it*).
+(❗) Server has been finally set up with a final version, on a real PostgreSQL database using **KnexJS**.
+
+Another commits will come for minor bug fixes and improvements.
 
 
 
