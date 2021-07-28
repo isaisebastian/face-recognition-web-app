@@ -49,7 +49,7 @@ e.g. localhost:3000/ (root) - "get all users"
 
 (❗) Server has been finally set up with a final version, on a real PostgreSQL database using **KnexJS**.
 
-Another commits will come for minor bug fixes and improvements.
+Updates will be made for minor bug fixes and improvements.
 
 
 
