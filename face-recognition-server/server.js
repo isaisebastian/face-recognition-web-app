@@ -5,6 +5,10 @@ const cors = require('cors');
 
 const knex = require('knex');
 
+const register = require('./controllers/register');
+const signin = require('./controllers/signin');
+const image = require('./controllers/image');
+
 const db = knex({
   client: 'pg',
   version: '7.2',
@@ -31,54 +35,10 @@ app.get('/', (req, resp) => {
 })
 
 
-app.post('/signin', (req, resp) => {
-	db.select('email', 'hash').from('login')
-		.where('email', '=', req.body.email)
-		.then(data => {
-			const isValid = bcrypt.compareSync(req.body.password, data[0].hash);
-			if(isValid) {
-				return db.select('*').from('users')
-					.where('email', '=', req.body.email)
-					.then(user => {
-						resp.json(user[0])
-					})
-					.catch(err => resp.status(400).json('Unable to get user!'))
-			} else {
-				resp.status(400).json('Wrong credentials!')
-			}
-		})
-		.catch(err => resp.status(400).json('Wrong credentials!'))
-})
+app.post('/signin', (req, resp) => { signin.handleSignIn(req, resp, db, bcrypt)} )
 
 
-app.post('/register', (req, resp) => {
-	const { email, name, password } = req.body;
-	const hash = bcrypt.hashSync(password);
-	db.transaction(trx => {
-		trx.insert({
-			hash: hash,
-			email: email
-		})
-		.into('login')
-		.returning('email')
-		.then(loginEmail => {
-			return trx('users')
-			.returning('*')
-			.insert({
-				email: loginEmail[0],
-				name: name,
-				joined: new Date()
-			})
-			.then(user => {
-				resp.json(user[0])
-			})
-		})
-		.then(trx.commit)
-		.catch(trx.rollback)
-	})
-
-		.catch(err => resp.status(400).json('Unable to register'))
-})
+app.post('/register', (req, resp) => { register.handleRegister(req, resp, db, bcrypt) })
 
 
 app.get('/profile/:id', (req, resp) => {
@@ -95,16 +55,8 @@ app.get('/profile/:id', (req, resp) => {
 })
 
 
-app.put('/image', (req, resp)=>{
-	const { id } = req.body;
-	db('users').where('id', '=', id)
-		.increment('entries', 1)
-		.returning('entries')
-		.then(entries => {
-			resp.json(entries[0]);
-		})
-		.catch(err => resp.status(400).json('Unable to get entries'))
-})
+app.put('/image', (req, resp) => {image.handleImage(req, resp, db)} )
+app.post('/imageurl', (req, resp) => {image.handleAPI(req, resp)} )
 
 // bcrypt.hash("bacon", null, null, function(err, hash) {
 //     // Store hash in your password DB.
