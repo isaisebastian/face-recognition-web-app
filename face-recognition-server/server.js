@@ -8,6 +8,7 @@ const knex = require('knex');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const image = require('./controllers/image');
+const { response } = require('express');
 
 const db = knex({
   client: 'pg',
@@ -26,12 +27,14 @@ const db = knex({
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json()); 
 
 app.use(cors());
 
+
+
 app.get('/', (req, resp) => {
-	resp.send('Succes!');
+	resp.send(db.users);
 })
 
 

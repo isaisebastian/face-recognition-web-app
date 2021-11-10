@@ -3,8 +3,8 @@ import React from 'react';
 
 // tachyons form 
 class Signin extends React.Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			signInEmail: '',
 			signInPassword: ''
@@ -28,7 +28,7 @@ class Signin extends React.Component {
 			})
 		}).then(response => response.json())
 			.then(user => {
-				if(user.id) {
+				if(user) {
 					this.props.loadUser(user)
 					this.props.onRouteChange('home');
 				}
