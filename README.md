@@ -9,12 +9,11 @@ Run instructions:
 ## Front-End
 ### **Components:** 
 - **Navigation** /nav for **signout** / **signin** / **register**.
-- **Logo** for looking nice 
+- **Logo** 
 - **ImageLinkForm** for image link input and submit button for detection.
 - **Rank** - displays user's entries. Established by number of user's image tests.
 - **FaceRecognition**:
   The object for face recognition will first need to figure out the first dot, second dot, third dot and the fourth dot, around the face and then we're just going to wrap it in a border. We are just using the response Clarifai's API gives us, the coordinates of the face in the picture. \
-Finally:
 - Quick **Sign In / Register Form** using [tachyons](https://tachyons.io/components/forms/sign-in/index.html). 
 
 ### **Built with:**
@@ -43,9 +42,9 @@ e.g. localhost:3000/ (root) - "get all users"
 ### **Resources:**
 
 - [Nodemon](https://www.npmjs.com/package/nodemon) - automatically restarting the node application when file changes in the directory are detected.
-- [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) - used to have a secure and real login form, encrypted passwords for users. \
+- [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) - used to have a secure and real login form, encrypted passwords for users. (deprecated, use [Bcrypt](https://www.npmjs.com/package/bcrypt) instead) \
 [Postman APIs Platform](https://www.postman.com/) has been used for tests, I assume it can be used any other tool directly in the browser from your browser web store (e.g. REST Ape - Advanced API Testing Client - Chrome Web Store).
-- 🆕 [Knex.js](https://knexjs.org/) - query builder for postgreSQL. 
+- [Knex.js](https://knexjs.org/) - query builder for postgreSQL. 
 
 (⚡️) Hosting powered by [Firebase](https://firebase.google.com/) 🔜 
 
