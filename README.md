@@ -17,7 +17,7 @@ Run instructions:
 Finally:
 - Quick **Sign In / Register Form** using [tachyons](https://tachyons.io/components/forms/sign-in/index.html). 
 
-### **Some resources:**
+### **Built with:**
 
 - [Particles.js](https://vincentgarreau.com/particles.js/) interactive background
 - [CSS Patterns Gallery](http://projects.verou.me/css3patterns/)
@@ -45,11 +45,11 @@ e.g. localhost:3000/ (root) - "get all users"
 - [Nodemon](https://www.npmjs.com/package/nodemon) - automatically restarting the node application when file changes in the directory are detected.
 - [Bcrypt-NodeJS](https://www.npmjs.com/package/bcrypt-nodejs) - used to have a secure and real login form, encrypted passwords for users. \
 [Postman APIs Platform](https://www.postman.com/) has been used for tests, I assume it can be used any other tool directly in the browser from your browser web store (e.g. REST Ape - Advanced API Testing Client - Chrome Web Store).
-- 🆕 [Knex.js](https://knexjs.org/) - query builder for SQL. 
+- 🆕 [Knex.js](https://knexjs.org/) - query builder for postgreSQL. 
 
-(❗) Server has been finally set up with a final version, on a real PostgreSQL database using **KnexJS**.
+(⚡️) Hosting powered by [Firebase](https://firebase.google.com/) 🔜 
 
-Updates will be made for minor bug fixes and improvements.
+Updates will be made from time to time for minor bug fixes, improvements and updates.
 
 
 
