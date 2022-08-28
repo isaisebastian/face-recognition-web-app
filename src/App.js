@@ -1,6 +1,6 @@
 import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import Rank from './components/Rank/Rank';
 import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
@@ -10,9 +10,11 @@ import React from 'react';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import './App.css';
 
+
 const app = new Clarifai.App({
-  apiKey: '38bb906a33a04eb7ba3c2d314ba013e4'
+  apiKey: "6dc7e46bc9124c5c8824be4822abe105"
 });
+
 
 const particlesOptions = {
   particles: {
@@ -116,7 +118,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Particles className='particles' 
-            params={particlesOptions} />
+            options={particlesOptions} />
         <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>  
         { this.state.route === 'home' 
           ? <div> 
